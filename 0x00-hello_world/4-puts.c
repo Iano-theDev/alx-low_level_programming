@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main- entry point block
+ * main - Entry point
+ *
  * Return- always o (success)
 */
 
