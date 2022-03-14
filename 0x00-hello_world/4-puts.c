@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main block
- * return: 0;
+ * main- entry point block
+ * return- always o (success)
 */
 
-int main (void)
+int main(void)
 {
 	puts("Programming is like building a multilingual puzzle\n");
 	return(0);
