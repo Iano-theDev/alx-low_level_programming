@@ -3,7 +3,7 @@
 #include <stdio.h>
 /* main - main block
  * Description: Generate a random number,
- * 		check if the number is positive or negative.
+ * 		check if the number is positive, zero or negative.
  * Return: 0
 */
 
@@ -15,11 +15,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	if(n > 0)
-		printf("is positive\n");
+		printf("%i is positive\n", n);
 	else if(n == 0)
-		printf("is zero\n");
+		printf("%i is zero\n", n);
 	else
-		printf("is negatve\n");
+		printf("%i is negatve\n", n);
 
 	return (0);
 }
