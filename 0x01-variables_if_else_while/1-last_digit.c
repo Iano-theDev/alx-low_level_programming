@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main -main block
- * Description: generate a random number and assign it to n and prints the last digit of the no. stored in n.
+ * Description: generate and print last digit of a random no.
  * Return: 0
  */
 
