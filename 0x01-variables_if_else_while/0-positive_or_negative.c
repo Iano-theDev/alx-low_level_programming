@@ -1,10 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* main - main block
-* Description: Generate a random number,
-* check if the number is positive, zero or negative.
-* Return: 0
+/*
+ * main - main block
+ * Description: Generate a random number,
+ * check if the number is positive, zero or negative.
+ * Return: 0
 */
 
 int main(void)
