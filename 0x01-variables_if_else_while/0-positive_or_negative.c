@@ -20,6 +20,6 @@ int main(void)
 		printf("is zero\n");
 	else
 		printf("is negatve\n");
-}
+
 	return (0);
 }
