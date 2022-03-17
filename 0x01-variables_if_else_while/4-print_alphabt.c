@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - main block 
+ * main - main block
  * Description: print alphabets in lowecase ommiting 'e' and 'q'.
  * Return: 0 (success)
  */
