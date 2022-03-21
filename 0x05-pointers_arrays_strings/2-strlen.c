@@ -6,5 +6,5 @@
 
 void _strlen(char *s)
 {
-_putchar("%p\n", s);
+putchar("%p\n", s);
 }
