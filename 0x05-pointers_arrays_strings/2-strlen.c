@@ -2,9 +2,17 @@
 /**
  * _strlen - gets string length
  * @s: string character
+ * Return: length of string
  */
 
-void _strlen(char *s)
+int _strlen(char *s)
 {
-_putchar("%p\n", s);
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		len++;
+	}
+	return (len);
 }
