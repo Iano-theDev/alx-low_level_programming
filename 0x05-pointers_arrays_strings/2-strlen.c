@@ -6,5 +6,10 @@
 
 void _strlen(char *s)
 {
-putchar("%p\n", s);
+
+	while (*s != '\0')
+	{
+		s++;
+	}
+	return (s);
 }
