@@ -5,7 +5,7 @@
  *
  * @str: string
  */
-void puts2(char *str)
+void puts2(char *)
 {
 	int i, j = 0;
 
