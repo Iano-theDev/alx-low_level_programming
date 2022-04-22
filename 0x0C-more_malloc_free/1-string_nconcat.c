@@ -1,9 +1,6 @@
 #include "main.h"
-<<<<<<< HEAD
 #include <stdlib.h>
-=======
 
->>>>>>> 53b7dd3c6f556fd0588af02846b8431387898451
 /**
  * string_nconcat - concatenates two strings
  * @s1: first string
