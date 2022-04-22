@@ -1,4 +1,27 @@
+<<<<<<< HEAD
 #include <stdlib.h>
+=======
+#include "main.h"
+
+/**
+ * _memset - copy char
+ * @s: string
+ * @b: input
+ * @n: bytes
+ * Return: string
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
+
+>>>>>>> 53b7dd3c6f556fd0588af02846b8431387898451
 /**
  * *_calloc - call
  * @nmemb: n
