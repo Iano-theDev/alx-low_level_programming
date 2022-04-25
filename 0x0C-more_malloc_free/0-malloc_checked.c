@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 #include <stdlib.h>
 #include <stdio.h>
-=======
 #include "main.h"
 
->>>>>>> 53b7dd3c6f556fd0588af02846b8431387898451
 /**
  * malloc_checked - allocates memory using malloc
  * @b: size to be allocated
