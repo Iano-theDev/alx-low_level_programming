@@ -6,37 +6,24 @@
  *
  * Return: the converted number
  */
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_unit(const char *b)
 {
 	int i;
-<<<<<<< HEAD
-	unsigned int n;
+	unsigned int num;
 
-	n = 0;
-=======
-	unsigned int dec_val = 0;
-
->>>>>>> refs/remotes/origin/main
+	num = 0;
 	if (!b)
 		return (0);
-
-	for (i = 0; b[i]; i++)
-	{
-		if (b[i] < '0' || b[i] > '1')
-			return (0);
-		dec_val = 2 * dec_val + (b[i] - '0');
-	}
-<<<<<<< HEAD
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		n <<= 1;
-		if (b[i] == '1')
-			n += 1;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
 	}
-	return (n);
+	for (i = 0; b[i] != '\0'; i++)
+	{
+		num <<= 1;
+		if (b[i] == '1')
+			num += 1;
+	}
+	return (num);
 }
-=======
-
-	return (dec_val);
-}
->>>>>>> refs/remotes/origin/main
