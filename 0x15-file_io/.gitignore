@@ -5,4 +5,4 @@
 temp/
 
 #ignore ALL files in THE directory named .vscode
-.vscode/
+.vscode/*
