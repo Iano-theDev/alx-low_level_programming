@@ -1,65 +1,52 @@
-#include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
+
 
 /**
- * _strlen - length of a string
- * @s: input char
- * Return: length of a string
+ * argstostr - concatenates all the arguments of a program
+ * @ac: argument count
+ * @av: arguments array
+ *
+ * Return: A pointer to a new string
  */
-
-int _strlen(char *s)
-{
-	int l = 0;
-
-	while (*s != '\0')
-	{
-		s++;
-		l++;
-	}
-	return (l);
-}
-
-/**
- * argstostr - concat
- * @ac: count
- * @av: vector
- * Return: string
- */
-
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	int len, R = 0;
-	char *p;
+	char *v = NULL, *s = NULL;
+	int len = 0, x = 0, i = 0;
 
-	if (!ac || !av)
-	{
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	}
-	R = 0;
 
 	for (i = 0; i < ac; i++)
 	{
-		len = _strlen(av[i]) + 1;
-		R += len;
-	}
-	p = malloc(sizeof(char) * R + 1);
+		v = av[i];
 
-	if (!p)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; i < ac; i++)
-	{
-		len = _strlen(av[i]);
-
-		for (j = 0; j < len; j++, k++)
+		while (*v != '\0')
 		{
-			p[k] = av[i][j];
+			v++;
+			len++;
 		}
-		p[k++] = '\n';
+		len++;
 	}
-	p[k] = '\0';
-	return (p);
+
+	s = malloc(sizeof(*s) * (len + 1));
+
+	if (s != NULL)
+	{
+		for (i = 0; i < ac; i++)
+		{
+			v = av[i];
+
+			while (*v != '\0')
+			{
+				s[x++] = *v;
+				v++;
+			}
+
+			s[x++] = '\n';
+		}
+
+		s[x] = '\0';
+	}
+
+	return (s);
 }
