@@ -1,2 +1,0 @@
-C programming.
-The Preprocessor.
