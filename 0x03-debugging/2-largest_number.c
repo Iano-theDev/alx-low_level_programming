@@ -20,17 +20,17 @@ else if ((b > a && a > c) || (b > c && c > a))
 {
 largest = b;
 }
-else if ((a = b && b < c))
+else if ((a == b && b < c))
 {
-    largest = c;
+largest = c;
 }
-else if ((a = c && c < b))
+else if ((a == c && c < b))
 {
-    largest = b;
+largest = b;
 }
-else if ((b = c && c < a))
+else if ((b == c && c < a))
 {
-    largest = a;
+largest = a;
 }
 else
 {
