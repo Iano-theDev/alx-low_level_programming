@@ -20,6 +20,18 @@ else if ((b > a && a > c) || (b > c && c > a))
 {
 largest = b;
 }
+else if ((a = b && b < c))
+{
+    largest = c;
+}
+else if ((a = c && c < b))
+{
+    largest = b;
+}
+else if ((b = c && c < a))
+{
+    largest = a;
+}
 else
 {
 largest = c;

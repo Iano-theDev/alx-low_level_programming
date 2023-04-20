@@ -13,7 +13,7 @@ int largest;
 
 a = -9;
 b = -8;
-c = -3;
+c = -9;
 
 largest = largest_number(a, b, c);
 
