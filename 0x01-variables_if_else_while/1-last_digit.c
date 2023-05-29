@@ -4,8 +4,7 @@
 
 /**
  * main - entry point
- * Description: print the last digit of variable stored in @n
- * @n: random integer
+ * Description: print the last digit of variable stored in
  * Return: 0 Always
  */
 
