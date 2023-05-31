@@ -25,11 +25,13 @@ void times_table(void)
 				_putchar(num1 + '0');
 				_putchar(num2 + '0');
 			}
-			else
+			else if(j != 0)
 			{
 				_putchar(' ');
 				_putchar(k + '0');
 			}
+			else
+				_putchar(k + '0');
 			if (j == 9)
 				break;
 			_putchar(',');
