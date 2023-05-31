@@ -25,7 +25,7 @@ void jack_bauer(void)
 					_putchar('\n');
 				}
 			}
-			if (i == 2 && j == 4)
+			if (i == 2 && j == 3)
 				break;
 		}
 	}
