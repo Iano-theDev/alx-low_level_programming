@@ -31,12 +31,10 @@ void times_table(void)
 				_putchar(k + '0');
 			}
 			if (j == 9)
-				continue;
+				break;
 			_putchar(',');
 			_putchar(' ');
 		}
-		if (i == 9 && j == 9)
-			break;
 		_putchar('\n');
 	}
 }
