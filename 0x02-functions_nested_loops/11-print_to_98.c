@@ -11,16 +11,15 @@ int get_abs(int n);
  */
 void print_to_98(int n)
 {
-	while (n < 98)
+	while (n != 98)
 	{
 		print_char(n);
-		n++;
+		if (n < 98)
+			n++;
+		else
+			n--;
 	}
-	while (n >= 98)
-	{
-		print_char(n);
-		n--;
-	}
+	print_char(n);
 	_putchar('\n');
 }
 
@@ -33,40 +32,19 @@ void print_to_98(int n)
 void print_char(int n)
 {
 	int abs_n = get_abs(n);
-	int num1, num2, num3;
+	int num1 = abs_n / 100;
+	int num2 = (abs_n % 100) / 10;
+	int num3 = abs_n % 10;
 
 	if (n < 0)
 		_putchar('-');
 
-	if (n < 9)
-	{
-		num1 = 0;
-		num2 = 0;
-		num3 = abs_n % 10;
-	}
-
-	num1 = abs_n / 100;
-	num2 = (abs_n % 100) / 10;
-	num3 = abs_n % 10;
-
-	if (num1 + num2 == 0)
-	{
-		_putchar(num3 + '0');
-		space_nums(n);
-	}
-	else if (num1 == 0)
-	{
-		_putchar(num2 + '0');
-		_putchar(num3 + '0');
-		space_nums(n);
-	}
-	else
-	{
+	if (num1 != 0)
 		_putchar(num1 + '0');
+	if (num1 != 0 || num2 != 0)
 		_putchar(num2 + '0');
-		_putchar(num3 + '0');
-		space_nums(n);
-	}
+	_putchar(num3 + '0');
+	space_nums(n);
 }
 
 /**
