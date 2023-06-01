@@ -13,13 +13,6 @@ void print_to_98(int n)
 {
 	while (n < 98)
 	{
-		if (n < 0)
-		{
-			int k;
-			k = get_abs(n);
-			_putchar('-');
-			print_char(k);
-		}
 		print_char(n);
 		n++;
 	}
@@ -39,18 +32,22 @@ void print_to_98(int n)
  */
 void print_char(int n)
 {
+	int abs_n = get_abs(n);
 	int num1, num2, num3;
- 
-	if (n < 9 && n >= 0)
+
+	if (n < 0)
+		_putchar('-');
+
+	if (n < 9)
 	{
 		num1 = 0;
 		num2 = 0;
-		num3 = n % 10;
+		num3 = abs_n % 10;
 	}
-			
-	num1 = n / 100;
-	num2 = (n % 100) / 10;
-	num3 = n % 10;
+
+	num1 = abs_n / 100;
+	num2 = (abs_n % 100) / 10;
+	num3 = abs_n % 10;
 
 	if (num1 + num2 == 0)
 	{
@@ -80,7 +77,10 @@ void print_char(int n)
  */
 int get_abs(int n)
 {
-	return(n * -1);
+	if (n < 0)
+		return (-n);
+	else
+		return (n);
 }
 
 /**
