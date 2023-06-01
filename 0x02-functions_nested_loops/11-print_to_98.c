@@ -4,10 +4,8 @@ void space_nums(int n);
 int get_abs(int n);
 
 /**
- * print_to_98 - Prints numbers to 98.
- * Description: Prints numbers from a point n to 98.
+ * print_to_98 - Prints numbers from n to 98
  * @n: starting point number.
- * Return: nothing, void
  */
 void print_to_98(int n)
 {
@@ -26,7 +24,6 @@ void print_to_98(int n)
 /**
  * print_char - prints individual ascii characters.
  * @n: characters to print
- * Return: nothing, void.
  */
 void print_char(int n)
 {
@@ -49,7 +46,7 @@ void print_char(int n)
 /**
  * get_abs - Get absolute value
  * @n: integer to get absolute value of
- * Return: n, absolute value of integer.
+ * Return: n
  */
 int get_abs(int n)
 {
@@ -62,7 +59,6 @@ int get_abs(int n)
 /**
  * space_nums - Space numbers
  * @n: number to space
- * Return: nothing, void.
  */
 void space_nums(int n)
 {
