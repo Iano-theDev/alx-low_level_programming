@@ -16,5 +16,6 @@ void print_to_98(int n);
 void print_char(int n);
 void space_nums(int n);
 int get_abs(int n);
+void print_times_table(int n);
 
 #endif
