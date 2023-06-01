@@ -17,19 +17,36 @@ void print_times_table(int n)
 		{
 			int k = i * j;
 
-			printf("%d", k);
-			if (j == n)
-				break;
-			putchar(',');
-			if (k < 10)
+			if (j > 0 && k < 10)
 			{
 				putchar(' ');
 				putchar(' ');
 			}
 			if (k > 9 && k < 100)
 				putchar(' ');
+			print_nums(k);
+			if (j == n)
+				break;
+			putchar(',');
 			putchar(' ');
 		}
 		putchar('\n');
 	}
+}
+
+/**
+ * print_nums - prints digits passed to it using putchar
+ * @n: number to print
+ */
+void print_nums(int n)
+{
+	int num1 = n / 100;
+	int num2 = (n % 100) / 10;
+	int num3 = n % 10;
+
+	if (num1 != 0)
+		putchar(num1 + '0');
+	if (num2 != 0 || num1 != 0)
+		putchar(num2 + '0');
+	putchar(num3 + '0');
 }

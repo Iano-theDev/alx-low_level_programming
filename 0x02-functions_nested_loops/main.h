@@ -17,5 +17,6 @@ void print_char(int n);
 void space_nums(int n);
 int get_abs(int n);
 void print_times_table(int n);
+void print_nums(int n);
 
 #endif
