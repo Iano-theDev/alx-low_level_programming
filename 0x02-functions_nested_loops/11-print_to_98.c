@@ -25,7 +25,6 @@ void print_to_98(int n)
 
 /**
  * print_char - prints individual ascii characters.
- * Description: breaks n into separate ascii characters and prints.
  * @n: characters to print
  * Return: nothing, void.
  */
@@ -49,7 +48,6 @@ void print_char(int n)
 
 /**
  * get_abs - Get absolute value
- * Description: Gets absolute value of n integer
  * @n: integer to get absolute value of
  * Return: n, absolute value of integer.
  */
@@ -63,7 +61,6 @@ int get_abs(int n)
 
 /**
  * space_nums - Space numbers
- * Desctiption: put a comma and a space between numbers
  * @n: number to space
  * Return: nothing, void.
  */
