@@ -15,11 +15,16 @@ int main(void)
 		if (n % 15 == 0)
 			printf("FizzBuzz ");
 		else if (n % 5 == 0)
-			printf("Buzz ");
+		{
+			if (n != 100)
+				print("Buzz ");
+			printf("Buzz");
+		}
 		else if (n % 3 == 0)
 			printf("Fizz ");
 		else
 			printf("%d ", n);
 	}
+	_puchar('\n');
 	return (0);
 }
