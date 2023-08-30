@@ -6,7 +6,7 @@
 
 void rev_string(char *s)
 {
-	char new_str[100];
+	char new_str[1000];
 	char *ptr = s;
 	int n = 0;
 
