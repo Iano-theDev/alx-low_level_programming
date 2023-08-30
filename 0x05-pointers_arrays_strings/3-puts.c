@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include "main.h"
+
+int _putchar(char c);
 
 /**
  * _puts - prints a string to std out
@@ -13,4 +16,6 @@ void _puts(char *str)
 		_putchar(*str);
 		str++;
 	}
+
+	_putchar('\n');
 }
