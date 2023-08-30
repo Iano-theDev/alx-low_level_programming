@@ -9,7 +9,8 @@ int main(void)
 {
     char *str;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    /* str = "I do not fear computers. I fear the lack of them - Isaac Asimov";*/
+    str = "Ian";
     print_rev(str);
     return (0);
 }
