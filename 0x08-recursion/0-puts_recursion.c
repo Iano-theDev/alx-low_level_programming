@@ -1,3 +1,7 @@
+#include "main.h"
+
+int _putchar(int n);
+
 /**
  * _puts_recursion - prints a string recursively followed by a new line
  * @s: string pointer to be printed
