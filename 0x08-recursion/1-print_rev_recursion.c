@@ -1,3 +1,5 @@
+int _putchar(int n);
+
 /**
  * _print_rev_recursion - prints string in reverse using recursion
  * @s: pointer to string to be reversed
