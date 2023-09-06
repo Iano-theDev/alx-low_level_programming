@@ -26,6 +26,9 @@ char *str_concat(char *s1, char *s2)
 
 	s3 = malloc((sizeof(char) * l3) + 1);
 
+	if (s3 == NULL)
+		return (NULL);
+
 	s3 = append_str((append_str(s3, s1)), s2);
 
 	return (s3);
