@@ -21,3 +21,22 @@ void puts_half(char *str)
 	}
 	_putchar('\n');
 }
+
+/**
+ * _strlen - gets the length of a string
+ * @s: string pointer
+ * Return: int, length of s
+ */
+
+int _strlen(char *s)
+{
+	int len;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
+}
