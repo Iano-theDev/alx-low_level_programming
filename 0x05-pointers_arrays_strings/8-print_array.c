@@ -15,7 +15,10 @@ void print_array(int *a, int n)
 	for (i = 0; i < n; i++)
 	{
 		if (n <= 0)
+		{
+			fprintf(stderr, "Error");
 			break;
+		}
 
 		if (i == n - 1)
 		{
