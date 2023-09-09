@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 
 int _strlen(char *s);
 int _putchar(char c);
@@ -11,11 +13,17 @@ int _putchar(char c);
 
 void puts_half(char *str)
 {
-	int len, i;
+	int len, i, n;
 
 	len = _strlen(str);
 
-	for (i = (len / 2); i < len; i++)
+	if ((len % 2) != 0)
+		n = (len / 2) + 1;
+
+	else if ((len % 2) == 0)
+		n = len / 2;
+
+	for (i = n; i < len; i++)
 	{
 		_putchar(*(str + i));
 	}
