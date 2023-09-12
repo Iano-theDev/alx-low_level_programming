@@ -3,4 +3,4 @@
 
 #define ABS(x) (((x) >= (0)) ? (x) : ((x) * (-1)))
 
-#enfif /* #ifndef MAIN_H */
+#endif /* #ifndef MAIN_H */
