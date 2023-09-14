@@ -5,13 +5,10 @@
 /**
  * get_op_func - gets the operation to perform
  * @s: operator
- * @int: first integer
- * @int: second integer
  * Return: int result, NULL if s doesnt match operator
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
-	int i = 0;
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -20,6 +17,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int i = 0;
 
 	while (ops[i].op)
 	{
