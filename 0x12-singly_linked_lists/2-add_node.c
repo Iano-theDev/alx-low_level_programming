@@ -40,18 +40,19 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (head && str)
 	{
-		new = malloc(sizeof(list_t));
-
-		if (new == NULL)
-		{
-			free(new);
-			return (NULL);
-		}
 		str_s = malloc(sizeof(str));
 
 		if (str_s == NULL)
 		{
 			free(str_s);
+			return (NULL);
+		}
+
+		new = malloc(sizeof(list_t));
+
+		if (new == NULL)
+		{
+			free(new);
 			return (NULL);
 		}
 
