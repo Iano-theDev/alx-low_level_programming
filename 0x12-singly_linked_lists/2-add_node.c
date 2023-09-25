@@ -35,32 +35,24 @@ size_t len_s(char *str)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new = NULL;
-	char *str_s;
-	size_t len;
 
 	if (head && str)
 	{
-		str_s = malloc(sizeof(str));
-
-		if (str_s == NULL)
-			return (NULL);
-
-		str_s = strdup(str);
-		len = len_s(str_s);
-
 		new = malloc(sizeof(list_t));
 		if (new == NULL)
+			return (NULL);
+
+		new->str = strdup(str);
+		if (new->str == NULL)
 		{
-			free(str_s);
+			free(new);
 			return (NULL);
 		}
+		new->len = len_s(new->str);
 
 		new->next = *head;
-		new->len = len;
-		new->str = str_s;
 
 		*head = new;
-
 		return (new);
 	}
 	return (new);
