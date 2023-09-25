@@ -12,17 +12,18 @@ size_t len_s(char *str);
  */
 size_t len_s(char *str)
 {
-        size_t len = 0;
-        if (str)
-        {
-                while (*str != '\0')
-                {
-                        len++;
-                        str++;
-                }
-                return (len);
-        }
-        return (len);
+	size_t len = 0;
+
+	if (str)
+	{
+		while (*str != '\0')
+		{
+			len++;
+			str++;
+		}
+		return (len);
+	}
+	return (len);
 }
 
 /**
