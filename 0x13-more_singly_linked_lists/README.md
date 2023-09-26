@@ -1,4 +1,4 @@
-# More on abstact data structure: Linked-Lists.
+# More on abstract data structure: Linked-Lists.
 
 * Insertion
 * Deletion
