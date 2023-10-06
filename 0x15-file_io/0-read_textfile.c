@@ -13,7 +13,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fp;
-	size_t count = 0;
+	ssize_t count = 0;
 	char *buff = NULL;
 	int bytes_written;
 
