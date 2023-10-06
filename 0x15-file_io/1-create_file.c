@@ -1,7 +1,6 @@
 #include "main.h"
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * create_file - creates a file
@@ -18,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	while (text_content[len] != '\0')
 		len++;
-	fd = open(filename, O_RDONLY | O_TRUNC | O_WRONLY, 0600);
+	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 	if (fd < 0)
 		return (-1);
 	write_v = write(fd, text_content, len);
