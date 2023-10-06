@@ -34,12 +34,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (count < 0)
 		return (0);
 
-	bytes_written = write(1, buff, letters);
+	bytes_written = write(1, buff, count);
 
 	if (bytes_written == -1)
 		return (0);
 
 	close(fp);
 
-	return (count);
+	return (bytes_written);
 }
