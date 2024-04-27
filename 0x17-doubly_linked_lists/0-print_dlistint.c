@@ -4,9 +4,8 @@
 /**
  * size_t print_dlistint - prints all the elemets of a dlistint_t list
  * @h: pointer to the head of a dlistint_t list
+ * 
  * Return: unsigned int, number of nodes
- *
- * Description: Prints all the elelments of a doubly linked list
  *
  */
 
