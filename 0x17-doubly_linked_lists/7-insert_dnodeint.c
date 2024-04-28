@@ -4,16 +4,14 @@
  * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: pointer to the start of the linked list
  * @idx: index/postion to insert the new node
- * @n: datav value of the new node
+ * @n: data value of the new node
  *
  * Return: address of the new node, NULL if it failed or otherwise
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n);
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int node_count = 0;
+	unsigned int node_count = 1;
 	dlistint_t *new, *current;
 
 	/* check if the list is empty or index is at the start*/
@@ -38,8 +36,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			(current)->next = new;
 			return (new);
 		}
-		current = (current)->next;
 		node_count++;
+		current = (current)->next;
 	}
 	if (node_count < idx)
 		return (NULL);
