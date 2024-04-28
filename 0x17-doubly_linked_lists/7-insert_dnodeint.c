@@ -41,6 +41,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		current = (current)->next;
 		node_count++;
 	}
+	if (node_count < idx)
+		return (NULL);
 	/* check if the index is at the end of the list */
 	new = add_dnodeint_end(h, n);
 	return (new);
