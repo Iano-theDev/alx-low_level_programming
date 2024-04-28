@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_dlistint_t - frees  a dlistint_t list
+ * free_dlistint - frees  a dlistint_t list
  * @head: pointer to the start of the list
  *
  * Return: void
