@@ -14,14 +14,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int node_count = 1;
 	dlistint_t *new, *current;
 
-	/* check if the list is empty or index is at the start*/
-	if (h == NULL || idx == 0)
+	/* check for a null pointer */
+	if (h == NULL)
+		return (NULL);
+
+	/* check if the list is empty/ index == start */
+	if (*h == NULL || idx == 0)
 	{
 		new = add_dnodeint(h, n);
 		return (new);
 	}
 	current = *h;
 	/* logic to insert node if index is neither start nor end */
+	/* check if the next node is null, not the current node */
 	while (current->next != NULL)
 	{
 		if (node_count == idx)
