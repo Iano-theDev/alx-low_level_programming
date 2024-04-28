@@ -12,41 +12,41 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *current;
 	unsigned int node_index = 0;
-	/* check for null pointer */
-	if (head == NULL)
+
+	if (head == NULL) /* null pointer */
 		return (-1);
-	/* check for an empty list */
-	if (*head == NULL)
+	if (*head == NULL) /* empty list */
 		return (-1);
 	current = *head;
-	/* check if next node is null, proceed to check for IOORE */
 	while (current->next != NULL)
 	{
 		if (node_index == index)
 		{
-			if (current->prev == NULL)
+			if (current->prev == NULL)/* del list start */
 			{
 				(current->next)->prev = NULL;
 				*head = current->next;
+				free(current);
 				return (1);
 			}
 			(current->next)->prev = current->prev;
 			(current->prev)->next = current->next;
+			free(current);
 			return (1);
 		}
 		node_index++;
 		current = current->next;
 	}
-	/* check if the index matckes the last node of the list */
-	if (node_index == index)
+	if (node_index == index) /* check index match */
 	{
-		/* Check if theres only one item in the list */
 		if (current->prev == NULL && current->next == NULL)
 		{
 			*head = NULL;
+			free(current);
 			return (1);
 		}
 		(current->prev)->next = NULL;
+		free(current);
 		return (1);
 	}
 	return (-1);
